@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <meta charset="utf-8" content="HTML, CSS, JavaScript">
+
+        <style>
+
+          label{
+            display:flex;
+            flex-direction:row;
+            align-items: center;
+            margin-bottom:5%;
+            margin-top:3%;
+          }
+          textarea{
+            width: 100%;
+            height: 10em;
+            border: solid 1px;
+            resize: none;
+          }
+
+          #flame{
+            width:80%;
+            padding-left: 10%;
+            padding-right: 10%;
+          }
+          #container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+          }
+          #logoBox{
+            display: flex;
+            margin-top:10%;
+            margin-bottom:5%;
+            align-items: center;
+            flex-direction: column;
+          }
+          .logoImg{
+            width:30%;
+          }
+          .contain{
+            display:flex;
+            flex-direction:column;
+
+          }
+          .text_top{
+            display: inline-block;
+            font-size: 1em;
+          }
+          .text{
+            display: inline-block;
+            font-weight:800;
+            font-size:2em;
+          }
+          .sign_up_check{
+                margin-right: 7px;
+                width:100px;
+                height:100px;
+                background: white no-repeat center center;
+                border: 1px solid mainColor;
+                cursor: pointer;
+                outline: none;
+                appearance: none;
+                border-radius: 50%;
+                background-image: url("./Data/unchecked.png");
+            }
+            .submit_box{
+              display:flex;
+              flex-direction: column;
+              justify-content:center;
+              margin-top:5%;
+            }
+            #cancel{
+              width:45%;
+              height:80%;
+              line-height:300%;
+              font-weight:700;
+              border-width:0px;
+              color:#fff;
+              background-color:#B4B6BE;
+            }
+
+            #check{
+              width:45%;
+              height:80%;
+              line-height:300%;
+              font-weight:700;
+              border-width:0px;
+              color:#fff;
+              background-color: #7793F4;
+            }
+        </style>
+        <script>
+            function openImg(tagId){
+              var image =document.getElementById(tagId.id);
+              console.log(image.checked)
+              if(image.checked == true){
+                  console.log("true");
+                  image.style.backgroundImage = "url('Data/unchecked.png')";
+              }else {
+                  console.log("false");
+                  image.style.backgroundImage = "url('./Data/checked.png')";
+              }
+            }
+            
+            function nextpage(){
+
+            }
+        </script>
+    </head>
+    <body>
+      <div id="flame">
+        <div id="container">
+          <div id="logoBox">
+            <img class="logoImg" src="./Data/team_logo.png">
+          </div>
+          <form class="contain"className="checkForm">
+            <label htmlFor="consen01">
+              <input class="sign_up_check" type="checkbox" name="check" id="consen01" onclick="openImg(this)" />
+              <div class="text_top"> 워크 관련 회원가입에 동의 절차에 수행함에 따라 아래 사항에 동의 사항에 모두 동의 합니다..</div>
+            </label>
+            
+            <label htmlFor="consen02">
+              <input class="sign_up_check" type="checkbox" name="check" id="consen02" onclick="openImg(this)" />
+              <div class="text">워크 이용 약관</div>
+            </label>
+            <textarea id="textArea1" clsas="signUpText"></textarea>
+            
+            <label id="btnLabel" htmlFor="consen03">
+              <input class="sign_up_check" type="checkbox" name="check" id="consen03" onclick="openImg(this)" />
+              <div class="text">개인정보 수집 및 이용</div>
+            </label>
+            <textarea id="textArea2" clsas="signUpText"></textarea>
+          
+            <!-- <label htmlFor="consen04">
+              <input class="sign_up_check" type="checkbox" name="check" id="consen04" onclick="openImg(this)" />
+              <div class="text"></div>
+            </label> -->
+            <div class="submit_box">
+              <label id="submit_box2" style="justify-content:space-around; height:100px;" htmlFor="submit">
+                <input id="cancel"type="button" value="취소" onClick="location.href='?id=accountView'">
+                <input id="check" type="button" value="확인" onClick="location.href='?id=signupInputView'">
+                <!-- <input id="check" type="submit" value="확인" onclick="nextpage(this)"> -->
+            </div>
+            </form>
+        </div>
+      </div>
+    </body>
+</html>

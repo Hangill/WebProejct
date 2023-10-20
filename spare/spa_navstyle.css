@@ -1,0 +1,325 @@
+body{
+    -ms-overflow-style: none;
+    }
+    
+   -webkit-scrollbar {
+     display: none;
+}
+
+header
+{
+    display:inline-block;
+    width:100%;
+    height:60px;
+    z-index: 2000;
+    background-color: #fff;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+a{
+    text-decoration:none;
+}
+
+a:link{
+    text-decoration: none!important;
+}
+
+li{
+    list-style: none;
+}
+body {
+    width:100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #58666e;
+    background-color: #f0f3f4;
+}
+nav{
+    float:right;
+}
+
+.nav_des{
+    position:absolute;
+    width:100%;
+    height:60px;
+    display:inline-block;
+    top:60px;
+    left:0px;
+    background-color: black;
+}
+.nav_li{
+    list-style:none;
+}
+.nav_li  > a{
+    text-decoration: none;
+    line-height: 30px;
+    padding: 0 10px;
+    color: rgba(0,0,0,0.4);
+}
+.nav_li > a:hover{  
+    color: rgba(0,0,0,0.8);
+}
+
+.nav_li > a:hover  .nav_des{  
+    background-color: aqua;
+}
+
+.nav_items > li{
+    display:inline-block;
+    line-height:5px;
+    /* 40px nav_item에서 삼각바 보여주는 곳 */
+    padding: 0px 40px 0px 5px;
+}
+
+.nav_des_bar{
+    background-color:#fff;
+    width:100%;
+    height:10%;
+    position: absolute;
+    z-index:0;
+    opacity:0;
+    top:5%;
+    transition: all 0.5s ease-in; 
+}
+.nav_des_bar:hover{
+    background-color:#fff;
+    width:100%;
+    height:10%;
+    position: absolute;
+    top:9%;
+    z-index:1;
+    opacity:100;
+}
+
+.nav_des_bar_ul{
+    align-items: center;
+}
+
+.nav_des_bar_li{
+    text-decoration: none;
+    float:left;
+    margin-left:3%;
+    margin-right:3%;
+    margin-top:1.5%;
+    
+}
+
+.nav_des_bar_li:hover{
+    color:black;
+}
+
+#nav_program.active{
+    /* background-color:#fff;
+    width:100%;
+    height:10%;
+    position: absolute; */
+    top:13%;
+    z-index:1;
+}
+
+.context{
+    display: inline-block;
+}
+
+#logo{
+    line-height: 60px;
+    padding:0px 30px;
+}
+
+.nav_list{
+    position:absolute;
+    width:300px;
+    height:100px;
+    right: 0px;
+    background-color: aqua;
+}
+
+.text{
+    background-color: #f0f3f4;
+}
+
+
+#inform_bar{
+    background-color:#fff;
+    border:solid 3px #58666e;
+    width: 100%;
+    height: 2em;
+    
+}
+
+.context{
+    display:inline-block;
+    width:100%;
+    height:100%;
+}
+
+
+
+
+#context1_product_circle{
+    display:inline-block;
+    position:relative;
+    width: 40%;
+    height: 80%;
+    top:0px;
+    right:50px;
+    left:-25%;
+    margin-left:4%;
+    margin-right:4%;
+    background-color: #000;
+    opacity:0.38;
+    border-radius: 50%;
+
+    animation-duration: 2s;
+    animation-name: slidein;
+
+}
+
+
+#context1_product_ul{
+    width:50%;
+    padding:0%;
+    top:49%;
+    right:-5%;
+    display:inline-block;
+    position:absolute;
+}
+
+#context1_product_ul_1{
+    width:50%;
+    padding:0%;
+    top:49%;
+    right:-5%;
+    display:inline-block;
+    position:absolute;
+}
+
+.context1_product_li_des_1{
+    /*  기존 10%  */
+    top:-16em;
+    position:absolute;
+    font-size:3.5em;
+    opacity:1;
+
+    /* animation-name:list_sliding; */
+    /* animation-duration:4s; */
+    
+    /* 트랜지션 작동 */
+    /* transition: 0.5s ease-in;  */
+}
+.context1_product_li_des_1_active{
+    /*  기존 10%  */
+    top:-16em;
+    position:absolute;
+    font-size:3.5em;
+    opacity:1;
+
+    animation-name:list_sliding;
+    animation-duration: 2s;
+    transition: 1s ease-in; 
+}
+
+#context1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.page{
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+#context_number1{
+    z-index:1;
+    background-color: #DEDFFF;
+    /* height:30em; */
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-content: center;
+    top:0%;
+    animation-name:down;
+    transition: ease-in 2s;
+    animation-duration: 2s;
+}
+
+/* #context_number1:hover{
+    top:100%;
+    transition: ease-in 2s;
+} */
+
+#context_number2{
+    display:none;
+}
+
+#context_number3{
+    /* display:none; */
+}
+#context_number4{
+    /* display:none; */
+    height:101%;
+}
+/*  Anmation / Transition */
+@keyframes slidein {
+    from{
+        left:-100%;
+    }
+    to{
+        left:-25%;
+    }
+}
+
+/* @keyframes listing{
+    from{
+
+    }
+
+} */
+
+
+@keyframes list_sliding { 
+
+    0%{ 
+        top:-16em;
+        opacity:1;
+    } 
+
+    50%{ 
+        top:-13em; 
+        opacity:1;
+        
+    } 
+
+    100%{  
+        top:-10em;
+        opacity:1;
+    } 
+
+}
+
+
+
+@keyframes down { 
+
+    0%{ 
+        top:0%;
+    } 
+    100%{  
+        top:100%;
+    } 
+}
+
+@keyframes up { 
+
+    0%{ 
+        top:100%;
+        /* opacity:1; */
+    } 
+    100%{  
+        top:0%;
+        /* opacity:1; */
+    } 
+}

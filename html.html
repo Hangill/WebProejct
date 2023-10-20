@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML 문서 제목</title>
+        <style>
+            .aa:hover ~ #bb { background-color: black;
+            }
+            .aa:hover {
+                background-color: aqua;
+            }
+            .aa:hover [class]{
+                background-color: brown;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <div>
+                <a class="aa">textaa</a>   
+                <div id="bb">textbb</div>
+            </div> 
+            <div id="ss">textss</div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <meta charset="utf-8" content="HTML, CSS, JavaScript">
+
+        <style>
+            * { 
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            li{
+                list-style: none;
+                display: inline-block;
+            }
+            
+            .wrapper img {
+                width: 300px;
+                height: 300px;
+                border-radius:30px;
+            }
+
+            body{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 250px;
+                background-color: #FFF;
+            }
+            
+            .a11y-hidden{
+                /* 웹 접근성을 고려한 숨김처리 */
+                clip: rect(1px, 1px, 1px, 1px);
+                clip-path: inset(); 
+                width: 1px;
+                height: 1px;
+                margin: -1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+            }
+
+            .check_btn{
+                width:75px;
+                height:75px;
+            }
+
+        
+            
+            /* IOS 375 , 812 */
+            /*
+            @media (max-width: 700px)
+            {
+                body{
+                    width:375px;
+                    height:812px;
+                }   
+            }
+            */
+
+            .flex-container{
+                display:flex;
+                width:80vw;
+                height:100%;
+                flex-direction: column;
+                justify-content:space-evenly;
+                background: #F9FAFF;
+                border-radius: 5vw;
+            }
+            
+            .flex-item{
+                width: 100%;
+                height:100%;
+                background: #F9FAFF;
+                align-items:center;
+            }
+
+
+            .Login_item{
+                text-align:center;
+                width:90%;
+                height:20%;
+                background: #FFFFFF;
+                border: 1px solid #CDD2E7;
+                border-radius: 1vw;
+                margin:auto;
+            }
+            
+            .input_box{
+                display:flex;
+                height:100%;
+                align-items:center;
+                justify-content: space-around;
+            }
+        </style>
+        <script>
+
+            function openImg(tagId){
+                var image =document.getElementById(tagId.id);
+                console.log(image.src)
+                if (image.src =='./Data/checked.png'){
+
+                    image.src = "./Data/unchecked.png";
+                } 
+                else{
+                    image.src = "./Data/checked.png";
+                }
+            }
+            
+        </script>
+    </head>
+    <body>
+        <div class="Container">
+            <div class="wrapper">
+                <h1 class="a11y-hidden"> LOGO</h1>
+                <img src="./Data/team_logo.png" alt="">
+            </div>
+            <img id="signUp_check_btn1" class="check_btn" src="./Data/unchecked.png" onclick="openImg(this)">  
+            <br>
+            <img id="signUp_check_btn2" class="check_btn" src="./Data/unchecked.png" onclick="openImg(this)">  
+            <br>
+            <img id="signUp_check_btn3" class="check_btn" src="./Data/unchecked.png" onclick="openImg(this)">  
+
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <style>
+
+            body{
+                background-color:#EEF0F5;
+            }   
+
+            .team_logo{
+                width:100px;
+                height:100px;
+                margin-left:50%;
+                margin-right:50%;
+                margin-top:10%;
+            }
+
+           
+            .ContentBox{
+                display:inline-block;
+                background-color: #F9FAFF;
+                width: 80%;
+                height: 80%;
+                margin-top:10%;
+                margin-left:10%;
+                margin-right:10%;
+                align-items:center;
+                border-radius: 20px;
+            }
+            
+            .ID{
+                align-items: center;
+            }
+
+            .logo{
+                display: inline-block;
+
+            }
+
+            .ID{
+                height:40px;
+                display: inline-block; 
+                background: #FFF;
+                border:0px;
+            }
+            
+            .input-box{
+                border-style: solid;
+
+                margin-left:10%;
+                margin-right:10%;
+
+                width:80%;
+                border-width: 1px;
+                border-color:#CDD2E7;
+            }
+
+          
+
+            /* 안드로이드 360 , 720 */
+            /* IOS 375 , 812 */
+            .name{
+                /*font-size:50px;*/
+            }
+
+            /* 안드로이드 */
+            @media (max-width : 360px) {
+                .name{
+                    font-size:100px;
+                }
+            }
+
+            /* IOS*/
+            @media (max-width: 700px)
+            {
+                .name{
+                    font-size:300px;
+                    background-color:black;
+                }
+            }
+
+            #sub{
+                width:290px;
+                height:100%;
+                background-color:#CCD2E7;
+                font-family: 'Inter';
+                font-style: normal;
+                border-radius: 10px;
+            }
+            
+            #userId,#userPw{
+                width:10%;
+            }
+
+            .logo{
+                display:inline-block;
+                width:60px;
+            }
+
+            .logo_container{
+            }
+        </style>
+
+    </head>
+    
+    <body>
+
+        <!-- LOGO -->
+        <div class="team_logo"><img src="Data/team_logo.png"></div>
+
+        <div class="ContentBox">
+            <!-- ID -->
+            <div class="input-box">
+                <div class="ID" id="userId" type="text" style="border-right:1px solid; border-color:#CDD2E7;"><img src="Data/Id_icon.png"></div>
+                <input class="ID"></input>
+            </div>  
+
+            <!-- PASSWORD -->
+            <div class="input-box">
+                <div class="ID" id="userPw" type="password" style="border-right:1px solid; border-color:#CDD2E7;"><img src="Data/Password_icon.png"></div>
+                <input class="ID"> </input>
+            </div>  
+
+            <!-- SUBMIT -->
+            <div id="sub_btn" class="flex-item">
+                <input id="sub" type="submit" value="New SAFI ? Sign Up"></input>
+            </div>
+        </div>
+        <div class="logo_container">
+            <img class="logo" src="Data/apple_logo.png">
+            <img class="logo" src="Data/kakao_logo.png">
+            <img class="logo" src="Data/google_logo.png">
+            <img class="logo" src="Data/naver_logo.png">
+        </div>
+
+    </body>
+</html>

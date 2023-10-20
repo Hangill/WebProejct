@@ -1,0 +1,215 @@
+<html>
+    <head>
+        <meta charset="utf-8" content="HTML, CSS, JavaScript">
+
+        <style>
+          input{
+            border:solid black 1px;
+            height:50%;
+            font-size: 50px;
+          }
+
+          textarea{
+            width: 100%;
+            height: 200%;                       
+            border: solid 1px;
+            resize: none;
+          }
+
+          #check{
+            width:45%;
+            height:100%;
+            line-height:300%;
+            font-weight:700;
+            border-width:0px;
+            color:#fff;
+            background-color: #7793F4;
+          }
+          #cancel{
+            width:45%;
+            height:100%;
+            line-height:300%;
+            font-weight:700;
+            border-width:0px;
+            color:#fff;
+            background-color:#B4B6BE;
+          }
+          
+          #id_check_btn{
+            width:50%;
+            height:4%;
+            margin-right:25%;
+            margin-left:25%;
+            margin-bottom:5%;
+            border-radius:5%;
+          }
+
+          #account_submit{
+            width:50%;
+            height:30%;
+            margin-right:25%;
+            margin-left:25%;
+            margin-bottom:5%;
+            border-radius:5%;
+          }
+
+          #logoBox{
+            display: flex;
+            margin-top:10%;
+            margin-bottom:5%;
+            align-items: center;
+            flex-direction: column;
+          }
+
+          #WhiteSpace_1{
+            height:-5%;
+          }
+
+          #WhiteSpace_2{
+          
+          }
+
+          #WhiteSpace_3{
+          }
+
+          #WhiteSpace_4{
+          }
+
+          #WhiteSpace_5{
+          }
+
+
+          .inputContain{
+            display:flex;
+            width:80%;
+            height:10%;
+            flex-direction: column;
+            padding-left: 10%;
+            padding-right: 10%;
+          }
+
+          .inputContain_birth{
+            display:flex;
+            flex-direction:row;
+            justify-content: space-between;
+            align-content: space-around;
+          }
+
+
+          .logoImg{
+            width:30%;
+          }
+
+          .label_tag{
+            font-size:3em;
+          }
+
+          #accountYear{
+            width:30%;
+          }
+          #accountMonth{
+            width:30%;
+            font-size: 50px;
+          }
+          #accountDay{
+            width:30%;
+          }
+        </style>
+        <script>
+            function openImg(tagId){
+              var image =document.getElementById(tagId.id);
+              console.log(image.checked)
+              if(image.checked == true){
+                  console.log("true");
+                  image.style.backgroundImage = "url('./Data/unchecked.png')";
+              }else {
+                  console.log("false");
+                  image.style.backgroundImage = "url('./Data/checked.png')";
+              }
+            }
+            
+            function nextpage(){
+              
+            }
+            function check_duplication(){
+              window.alert("중복로그인");
+            }
+        </script>
+    </head>
+    <body>
+      <div id="flame">
+        <div id="container">
+          <div id="logoBox">
+            <img class="logoImg" src="./Data/team_logo.png">
+          </div>
+
+          <form class="contain" className="checkForm" method="post" action="http://localhost:3000/?id=signupEndView">
+            <div class="inputContain">
+              <label class="label_tag"for="accountId">아아디</label>
+              <input class="label_tag_input" text="text" name="id" id="accountId">
+            </div>
+
+            <input id="id_check_btn" type="button" value="아이디 중복확인" onclick="check_duplication()">
+            
+            <div id="WhiteSpace_1"></div>
+            
+            <div class="inputContain">
+              <label class="label_tag"for="accountId">비밀번호</label>
+              <input class="label_tag_input" text="text" name="pw"id="accountPw">
+            </div>
+            
+            <div id="WhiteSpace_2"></div>
+
+            <div class="inputContain">
+              <label class="label_tag"for="accountId">비밀번호 재확인</label>
+              <input class="label_tag_input" text="text" id="accountPwRe">
+            </div>
+
+            <div id="WhiteSpace_3"></div>
+
+            <div class="inputContain">
+              <label class="label_tag"for="accountId">이름</label>
+              <input class="label_tag_input" text="text" name="name" id="accountName">
+            </div>
+            
+            <div id="WhiteSpace_4"></div>
+
+            <div class="inputContain">
+              <label class="label_tag"for="accountId">생년월일</label>
+              <div class="inputContain_birth">
+                <input class="label_tag_input" style="height:100%;" type="text" placeholder="년" text="text" name="year"id="accountYear" maxlength="4">
+                <label for="accountMonth"></label>
+                <select name="month" id="accountMonth">
+                  <option value="01" >1월</option>
+                  <option value="02" >2월</option>
+                  <option value="03" >3월</option>
+                  <option value="04" >4월</option>
+                  <option value="05" >5월</option>
+                  <option value="06" >6월</option>
+                  <option value="07" >7월</option>
+                  <option value="08" >8월</option>
+                  <option value="09" >9월</option>
+                  <option value="10" >10월</option>
+                  <option value="11" >11월</option>
+                  <option value="12" >12월</option>
+                </select>
+                <input name="day" id="accountDay" class="label_tag_input" style="height:100%;" type="text" placeholder="일" text="text" maxlength="2">
+              </div>
+            </div>
+
+            <div id="WhiteSpace_5"></div>
+
+            <div class="inputContain">
+              <label class="label_tag"for="accountId">이메일</label>
+              <input class="label_tag_input" text="text" id="accountName">
+            </div>
+            <div class="inputContain">
+                <label id="submit_box2" style="justify-content:space-around; height:100px;" htmlFor="submit">
+                <input id="cancel"type="button" value="취소" onClick="location.href='/?id=signupAgreeView'">
+                <input id="check" type="submit" value="확인" >
+            </div>
+          </form>
+        </div>
+      </div>
+    </body>
+</html>
